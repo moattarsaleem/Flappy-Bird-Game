@@ -1,0 +1,148 @@
+
+/*  Added by moattar */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.background {
+	height: 100vh;
+	width: 100vw;
+	background: url('images/bg.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bird {
+	height: 100px;
+	width: 130px;
+	position: fixed;
+	top: 40vh;
+	left: 30vw;
+	z-index: 100;
+} 
+
+.pipe_sprite {
+	position: fixed;
+	top: 40vh;
+	left: 100vw;
+	height: 70vh;
+	width: 6vw;
+	background:radial-gradient(rgb(65, 40, 7) 23%, rgb(179, 139, 67));
+	border: 5px solid black;
+	border-radius:7px;
+	border  : none;
+}
+
+/*  Added by zohra */
+.message {
+	position: absolute;
+	font-family: 'Press Start 2P', cursive;
+	z-index: 10;
+	color: rgba(252, 210, 0, 0.982);
+	top: 50%; 
+	left: 50%;
+	font-size: 4em;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.messageStyle{
+	background: rgba(66, 34, 5, 0.958);
+	padding: 70px;
+	box-shadow: rgba(2, 89, 31, 0.53) 22px 28px 22px;
+	border-radius: 5%;
+}
+.score {
+	position: fixed;
+	z-index: 10;
+	height: 10vh;
+	font-size: 10vh;
+	font-weight: 100;
+	color: rgba(255, 255, 4, 0.982);
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+	top: 0;
+	left: 0;
+	margin: 10px;
+	font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+	/* text-shadow:
+        -2px -2px 5px rgba(18, 235, 18, 0.485),
+         2px -2px 5px rgba(0, 255, 34, 0.574),
+        -2px  2px 5px rgba(0, 255, 0, 0.47),
+         2px  2px 5px rgba(0, 255, 0, 0.515),
+         0px  0px 10px rgba(0, 255, 0, 0.485),
+         0px  0px 20px rgba(0, 255, 0, 0.53); */
+}
+
+
+.score_val {
+	color: gold;
+	font-weight: bold;
+}
+
+.bg-bird {
+    position: fixed;
+    top: 20%;
+    left: -100px;
+    width: 80px;
+    opacity: 1.5;
+    z-index: 1;
+    animation: flyBird 6s linear infinite;
+}
+
+@keyframes flyBird {
+    0% {
+        left: -100px;
+        top: 20%;
+    }
+    50% {
+        top: 30%;
+    }
+    100% {
+        left: 100vw;
+        top: 20%;
+    }
+}
+
+
+
+/*  Added by shiza */
+@media only screen and (max-width: 1080px) {
+    .message{
+		font-size: 50px;
+		top: 50%;
+		white-space: nowrap;
+	}
+	.score{
+		font-size: 8vh;
+	}
+	.bird{
+		width: 120px;
+		height: 90px;
+	}
+	.pipe_sprite{
+		width: 14vw;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+    .message{
+		font-size: 25px;
+	}
+	.score{
+		font-size: 5vh;
+	}
+	.bird{
+		width: 80px;
+		height: 60px;
+		left: 30vw;
+	}
+	.pipe_sprite{
+		width: 10vw;
+	}
+}
